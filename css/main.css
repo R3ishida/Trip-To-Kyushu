@@ -1,0 +1,280 @@
+html {
+  overflow: auto;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  color: #707070;
+  overflow: hidden;
+  background-color: rgba(151, 255, 187, 0.2117647059);
+}
+body .title-box {
+  font-weight: 700;
+}
+body .title-box .left-title div {
+  font-size: 10vw;
+  line-height: 16vw;
+  height: 16vw;
+  padding-top: 1vw;
+  padding-left: 5vw;
+  border-radius: 0 8vw 8vw 0;
+  color: white;
+}
+body .title-box .left-title .title1 {
+  width: 75vw;
+  background-color: #8DCEA4;
+}
+body .title-box .left-title .title2 {
+  width: 94vw;
+  background-color: #D0E562;
+}
+body .title-box .airplane {
+  height: 18vw;
+}
+body .title-box .right-title div {
+  font-size: 12vw;
+  text-align: right;
+}
+body .title-box .right-title .title3 {
+  padding-right: 5vw;
+}
+body .title-box .right-title .title4 {
+  font-size: 13vw;
+  padding-right: 12vw;
+  background-color: #399051;
+  font-weight: 600;
+  width: 80vw;
+  margin-left: 20vw;
+  line-height: 22vw;
+  height: 20vw;
+  border-radius: 10vw 0 0 10vw;
+  color: white;
+  box-shadow: 2vw 2vw black;
+}
+body .plan-box {
+  margin-top: 10vw;
+  position: relative;
+  height: 120vw;
+}
+body .plan-box .plan-title {
+  font-size: 12vw;
+  text-align: center;
+  font-weight: 700;
+  position: absolute;
+  width: 100vw;
+  top: 30vw;
+}
+body .plan-box .arrow {
+  position: absolute;
+  left: 49vw;
+  top: 40vw;
+}
+body .plan-box .arrow .point {
+  background-color: #ababab;
+  width: 3vw;
+  height: 3vw;
+  border-radius: 1.5vw;
+  margin: 4vw auto;
+}
+body .plan-box .arrow svg {
+  width: 7vw;
+  margin-top: 0;
+}
+body .plan-box img {
+  position: absolute;
+  box-sizing: content-box;
+}
+body .plan-box .image1 {
+  top: 37vw;
+  left: -5vw;
+  width: 36vw;
+  height: 36vw;
+  border-radius: 36vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3vw solid rgba(213, 223, 66, 0.5882352941);
+}
+body .plan-box .image2 {
+  bottom: 0vw;
+  right: -5vw;
+  width: 44vw;
+  height: 44vw;
+  border-radius: 44vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3vw solid rgba(207, 97, 97, 0.2470588235);
+}
+body .plan-box .image3 {
+  right: -5vw;
+  top: 1vw;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 30vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 3vw solid rgba(191, 242, 217, 0.337254902);
+}
+body .plan {
+  margin-top: 10vw;
+}
+body .plan .space {
+  width: 100vw;
+  height: 300vw;
+}
+body .plan .day1-space {
+  position: relative;
+}
+body .plan .day1-space .kyushu_map {
+  position: absolute;
+  top: 21vw;
+  left: -5vw;
+  width: 110vw;
+}
+body .plan .day1-space .contents div {
+  position: absolute;
+}
+body .plan .day1-space .contents .day {
+  font-size: 14vw;
+  font-weight: 700;
+  top: 7vw;
+  left: 100vw;
+}
+body .plan .day1-space .contents .date {
+  font-size: 8vw;
+  font-weight: 600;
+  top: 12vw;
+  right: 5vw;
+  opacity: 0;
+}
+body .plan .day1-space .contents .location-mark {
+  opacity: 0;
+  width: 12vw;
+  height: 12vw;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 6vw;
+  border: solid 2vw #5D8762;
+}
+body .plan .day1-space .contents .location {
+  opacity: 0;
+  font-size: 9vw;
+  font-weight: 700;
+}
+body .plan .day1-space .contents .caption {
+  opacity: 0;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.65);
+  width: 80vw;
+  height: 100vw;
+  left: 10vw;
+}
+body .plan .day1-space .contents .caption .triangle {
+  top: -7vw;
+  position: absolute;
+  border-right: 5vw solid transparent;
+  border-bottom: 7vw solid rgba(255, 255, 255, 0.65);
+  border-left: 5vw solid transparent;
+}
+body .plan .day1-space .contents .caption .container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+body .plan .day1-space .contents .caption .container .time {
+  font-size: 10vw;
+  font-weight: 600;
+  top: 5vw;
+  left: 5vw;
+}
+body .plan .day1-space .contents .caption .container .text {
+  font-size: 8vw;
+  top: 15vw;
+  left: 5vw;
+}
+body .plan .day1-space .contents .caption .container img {
+  position: absolute;
+  bottom: 5vw;
+  width: 65vw;
+  left: 7.5vw;
+  height: 65vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .plan .day1-space .contents .caption .first {
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
+body .plan .day1-space .contents .caption .second {
+  top: 0;
+  left: 100vw;
+}
+body .plan .day1-space .day1-contents .location-mark {
+  top: 31vw;
+  left: 40vw;
+}
+body .plan .day1-space .day1-contents .location {
+  top: 45vw;
+  left: 30vw;
+}
+body .plan .day1-space .day1-contents .caption {
+  top: 63vw;
+}
+body .plan .day1-space .day1-contents .caption .triangle {
+  left: 30vw;
+}
+body .plan .day1-space .kitakyushu {
+  display: none;
+}
+body .plan .day1-space .kitakyushu .location-mark {
+  top: 22vw;
+  left: 45vw;
+}
+body .plan .day1-space .kitakyushu .location {
+  top: 36vw;
+  left: 30vw;
+}
+body .plan .day1-space .kitakyushu .caption {
+  top: 54vw;
+  height: 110vw;
+}
+body .plan .day1-space .kitakyushu .caption .triangle {
+  left: 30vw;
+}
+body .plan .day1-space .beppu {
+  display: none;
+}
+body .plan .day1-space .beppu .location-mark {
+  top: 38vw;
+  right: 11vw;
+}
+body .plan .day1-space .beppu .location {
+  top: 40vw;
+  right: 25vw;
+}
+body .plan .day1-space .beppu .caption {
+  top: 57vw;
+}
+body .plan .day1-space .beppu .caption .triangle {
+  right: 22vw;
+}
+body .plan .day1-space .beppu .caption .first {
+  top: 0;
+  left: 0;
+}
+body .plan .day1-space .beppu .caption .second {
+  top: 0;
+  left: 100vw;
+}
+body .plan .day1-space .beppu .caption .third {
+  top: 0;
+  left: 100vw;
+}
+body .plan .day1-space .day3-contents {
+  display: none;
+}
+body .plan .day1-space .day4-contents {
+  display: none;
+}
+body .plan .trigger div div {
+  height: 100vw;
+}/*# sourceMappingURL=main.css.map */
