@@ -6,7 +6,7 @@ body {
   font-family: "Josefin Sans", sans-serif;
   color: #707070;
   overflow: hidden;
-  background-color: rgba(151, 255, 187, 0.2117647059);
+  background-color: rgba(151, 255, 187, 0.1254901961);
 }
 body .title-box {
   font-weight: 700;
@@ -29,7 +29,32 @@ body .title-box .left-title .title2 {
   background-color: #D0E562;
 }
 body .title-box .airplane {
-  height: 18vw;
+  height: 20vw;
+  position: relative;
+}
+body .title-box .airplane svg {
+  position: absolute;
+  right: 75vw;
+  margin-top: 5vw;
+  height: 10vw;
+}
+body .title-box .airplane .line {
+  width: 70vw;
+  height: 2vw;
+  position: absolute;
+  top: 9.5vw;
+  right: 0;
+}
+body .title-box .airplane .line::before {
+  content: "";
+  background-image: linear-gradient(to right, #707070, #707070 2vw, transparent 2vw, transparent 4vw);
+  background-size: 4vw 1.5vw;
+  background-repeat: repeat-x;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 body .title-box .right-title div {
   font-size: 12vw;
@@ -222,9 +247,6 @@ body .plan .space .day1-contents .caption {
 body .plan .space .day1-contents .caption .triangle {
   left: 30vw;
 }
-body .plan .space .kitakyushu {
-  display: none;
-}
 body .plan .space .kitakyushu .location-mark {
   top: 22vw;
   left: 45vw;
@@ -239,9 +261,6 @@ body .plan .space .kitakyushu .caption {
 }
 body .plan .space .kitakyushu .caption .triangle {
   left: 30vw;
-}
-body .plan .space .beppu {
-  display: none;
 }
 body .plan .space .beppu .location-mark {
   top: 38vw;
@@ -268,12 +287,6 @@ body .plan .space .beppu .caption .second {
 body .plan .space .beppu .caption .third {
   top: 0;
   left: 100vw;
-}
-body .plan .space .day3-contents {
-  display: none;
-}
-body .plan .space .day4-contents {
-  display: none;
 }
 body .plan .trigger {
   width: 100%;

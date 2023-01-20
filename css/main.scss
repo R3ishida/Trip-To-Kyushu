@@ -5,7 +5,7 @@ body {
     font-family: 'Josefin Sans', sans-serif;
     color: #707070;
     overflow: hidden;
-    background-color: #97ffbb36;
+    background-color: #97ffbb20;
     .title-box {
         font-weight: 700;
         .left-title {
@@ -28,7 +28,32 @@ body {
             }
         }
         .airplane {
-            height: 18vw;
+            height: 20vw;
+            position: relative;
+            svg {
+                position: absolute;
+                right: 75vw;
+                margin-top: 5vw;
+                height: 10vw;
+            }
+            .line {
+                width: 70vw;
+                height: 2vw;
+                position: absolute;
+                top: 9.5vw;
+                right: 0;
+            }
+            .line::before {
+                content: "";
+                background-image: linear-gradient(to right, #707070, #707070 2vw, transparent 2vw, transparent 4vw);
+                background-size: 4vw 1.5vw;
+                background-repeat: repeat-x;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+              }
         }
         .right-title {
             div {
@@ -238,7 +263,6 @@ body {
                         left: 30vw;
                     }
                 }
-                display: none;
             }
             .beppu {
                 .location-mark {
@@ -267,14 +291,11 @@ body {
                         left: 100vw;
                     }
                 }
-                display: none;
             }
             
             .day3-contents {
-                display: none;
             }
             .day4-contents {
-                display: none;
             }
         }
         .trigger {

@@ -55,16 +55,22 @@ $(window).on('load', function(){
         delay: 0.2
     })
 
+    gsap.from('.airplane', {
+        x: width,
+        duration: 2,
+        delay: 1.5,
+    })
+
     gsap.from('.right-title .title3', {
         x: width,
         duration: 2,
-        delay: 2,
+        delay: 1.5,
     })
 
     gsap.from('.right-title .title4', {
         x: width,
-        duration: 0.6,
-        delay: 4,
+        duration: 1,
+        delay: 3,
     })
 });
 
