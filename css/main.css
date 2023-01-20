@@ -116,37 +116,37 @@ body .plan-box .image3 {
 }
 body .plan {
   margin-top: 10vw;
+  position: relative;
 }
 body .plan .space {
+  position: relative;
   width: 100vw;
   height: 300vw;
 }
-body .plan .day1-space {
-  position: relative;
-}
-body .plan .day1-space .kyushu_map {
+body .plan .space .kyushu_map {
   position: absolute;
   top: 21vw;
   left: -5vw;
   width: 110vw;
+  opacity: 0;
 }
-body .plan .day1-space .contents div {
+body .plan .space .contents div {
   position: absolute;
 }
-body .plan .day1-space .contents .day {
+body .plan .space .contents .day {
   font-size: 14vw;
   font-weight: 700;
   top: 7vw;
   left: 100vw;
 }
-body .plan .day1-space .contents .date {
+body .plan .space .contents .date {
+  opacity: 0;
   font-size: 8vw;
   font-weight: 600;
   top: 12vw;
   right: 5vw;
-  opacity: 0;
 }
-body .plan .day1-space .contents .location-mark {
+body .plan .space .contents .location-mark {
   opacity: 0;
   width: 12vw;
   height: 12vw;
@@ -154,12 +154,12 @@ body .plan .day1-space .contents .location-mark {
   border-radius: 6vw;
   border: solid 2vw #5D8762;
 }
-body .plan .day1-space .contents .location {
+body .plan .space .contents .location {
   opacity: 0;
   font-size: 9vw;
   font-weight: 700;
 }
-body .plan .day1-space .contents .caption {
+body .plan .space .contents .caption {
   opacity: 0;
   position: absolute;
   background-color: rgba(255, 255, 255, 0.65);
@@ -167,30 +167,30 @@ body .plan .day1-space .contents .caption {
   height: 100vw;
   left: 10vw;
 }
-body .plan .day1-space .contents .caption .triangle {
+body .plan .space .contents .caption .triangle {
   top: -7vw;
   position: absolute;
   border-right: 5vw solid transparent;
   border-bottom: 7vw solid rgba(255, 255, 255, 0.65);
   border-left: 5vw solid transparent;
 }
-body .plan .day1-space .contents .caption .container {
+body .plan .space .contents .caption .container {
   width: 100%;
   height: 100%;
   position: absolute;
 }
-body .plan .day1-space .contents .caption .container .time {
+body .plan .space .contents .caption .container .time {
   font-size: 10vw;
   font-weight: 600;
   top: 5vw;
   left: 5vw;
 }
-body .plan .day1-space .contents .caption .container .text {
+body .plan .space .contents .caption .container .text {
   font-size: 8vw;
   top: 15vw;
   left: 5vw;
 }
-body .plan .day1-space .contents .caption .container img {
+body .plan .space .contents .caption .container img {
   position: absolute;
   bottom: 5vw;
   width: 65vw;
@@ -199,82 +199,107 @@ body .plan .day1-space .contents .caption .container img {
   -o-object-fit: cover;
      object-fit: cover;
 }
-body .plan .day1-space .contents .caption .first {
+body .plan .space .contents .caption .first {
   opacity: 0;
   top: 0;
   left: 0;
 }
-body .plan .day1-space .contents .caption .second {
+body .plan .space .contents .caption .second {
   top: 0;
   left: 100vw;
 }
-body .plan .day1-space .day1-contents .location-mark {
+body .plan .space .day1-contents .location-mark {
   top: 31vw;
   left: 40vw;
 }
-body .plan .day1-space .day1-contents .location {
+body .plan .space .day1-contents .location {
   top: 45vw;
   left: 30vw;
 }
-body .plan .day1-space .day1-contents .caption {
+body .plan .space .day1-contents .caption {
   top: 63vw;
 }
-body .plan .day1-space .day1-contents .caption .triangle {
+body .plan .space .day1-contents .caption .triangle {
   left: 30vw;
 }
-body .plan .day1-space .kitakyushu {
+body .plan .space .kitakyushu {
   display: none;
 }
-body .plan .day1-space .kitakyushu .location-mark {
+body .plan .space .kitakyushu .location-mark {
   top: 22vw;
   left: 45vw;
 }
-body .plan .day1-space .kitakyushu .location {
+body .plan .space .kitakyushu .location {
   top: 36vw;
   left: 30vw;
 }
-body .plan .day1-space .kitakyushu .caption {
+body .plan .space .kitakyushu .caption {
   top: 54vw;
   height: 110vw;
 }
-body .plan .day1-space .kitakyushu .caption .triangle {
+body .plan .space .kitakyushu .caption .triangle {
   left: 30vw;
 }
-body .plan .day1-space .beppu {
+body .plan .space .beppu {
   display: none;
 }
-body .plan .day1-space .beppu .location-mark {
+body .plan .space .beppu .location-mark {
   top: 38vw;
   right: 11vw;
 }
-body .plan .day1-space .beppu .location {
+body .plan .space .beppu .location {
   top: 40vw;
   right: 25vw;
 }
-body .plan .day1-space .beppu .caption {
+body .plan .space .beppu .caption {
   top: 57vw;
 }
-body .plan .day1-space .beppu .caption .triangle {
+body .plan .space .beppu .caption .triangle {
   right: 22vw;
 }
-body .plan .day1-space .beppu .caption .first {
+body .plan .space .beppu .caption .first {
   top: 0;
   left: 0;
 }
-body .plan .day1-space .beppu .caption .second {
+body .plan .space .beppu .caption .second {
   top: 0;
   left: 100vw;
 }
-body .plan .day1-space .beppu .caption .third {
+body .plan .space .beppu .caption .third {
   top: 0;
   left: 100vw;
 }
-body .plan .day1-space .day3-contents {
+body .plan .space .day3-contents {
   display: none;
 }
-body .plan .day1-space .day4-contents {
+body .plan .space .day4-contents {
   display: none;
 }
-body .plan .trigger div div {
+body .plan .trigger {
+  width: 100%;
+}
+body .plan .trigger div .day {
+  height: 40vw;
+}
+body .plan .trigger div .date {
   height: 100vw;
+}
+body .plan .trigger div .location-mark {
+  height: 40vw;
+}
+body .plan .trigger div .location {
+  height: 100vw;
+}
+body .plan .trigger div .caption {
+  height: 200vw;
+}
+body .plan .trigger div .inner-caption {
+  height: 400vw;
+}
+body .plan .trigger div .span {
+  height: 100vw;
+}
+body .plan .trigger .end {
+  width: 100vw;
+  height: 500vw;
 }/*# sourceMappingURL=main.css.map */

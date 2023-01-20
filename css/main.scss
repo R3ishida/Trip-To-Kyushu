@@ -115,17 +115,17 @@ body {
     }
     .plan {
         margin-top: 10vw;
+        position: relative;
         .space {
+            position: relative;
             width: 100vw;
             height: 300vw;
-        }
-        .day1-space {
-            position: relative;
             .kyushu_map {
                 position: absolute;
                 top: 21vw;
                 left: -5vw;
                 width: 110vw;
+                opacity: 0;
             }
             .contents {
                 div {
@@ -138,11 +138,11 @@ body {
                     left: 100vw;
                 }
                 .date {
+                    opacity: 0;
                     font-size: 8vw;
                     font-weight: 600;
                     top: 12vw;
                     right: 5vw;
-                    opacity: 0;
                 }
                 .location-mark {
                     opacity: 0;
@@ -278,12 +278,34 @@ body {
             }
         }
         .trigger {
+            width: 100%;
             div {
-                div {
+                .day {
+                    height: 40vw;
+                }
+                .date {
+                    height: 100vw;
+                }
+                .location-mark {
+                    height: 40vw;
+                }
+                .location {
+                    height: 100vw;
+                }
+                .caption {
+                    height: 200vw;
+                }
+                .inner-caption {
+                    height: 400vw;
+                }
+                .span {
                     height: 100vw;
                 }
             }
+            .end {
+                width: 100vw;
+                height: 500vw;
+            }
         }
-        
     }
 }
