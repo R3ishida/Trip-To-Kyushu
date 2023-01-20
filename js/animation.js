@@ -192,27 +192,152 @@ gsap.to(`.space .fukuoka .location-mark`, {
 for (let i = 0; i < locations.length; i++) {
     for (let j = 0; j < contents.length; j++) {
         if (contents[j] === "day") {
-            gsap.to(`.space .${locations[i]} .day`, {
-                x: -width*0.95,
-                opacity: 1,
-                duration: 1,
-                ease: "power4.out",
-                scrollTrigger: {
-                    trigger: `.trigger .${locations[i]} .day`,
-                    start: 'top top',
-                },
-            });
-            if (i < locations.length-1)
-            gsap.to(`.space .${locations[i]} .day`, {
-                y: -height,
-                opacity: 0,
-                duration: 3,
-                scrollTrigger: {
-                    trigger: `.trigger .${locations[i+1]}`,
-                    start: 'top top', 
-                }
-            })
-        } else if (contents[j] === "location-mark") {
+            if (locations[i] === "kitakyushu") { 
+                //表示
+                gsap.to(`.space .kitakyushu .day`, {
+                    x: -width*0.95,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: `.trigger .kitakyushu .day`,
+                        start: 'top top',
+                    },
+                });
+
+                //退場
+                gsap.to(`#kitakyushu_day`, {
+                    y: -height,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: `.trigger .yufuin`,
+                        start: 'top top', 
+                    }
+                })
+                gsap.to(`#kitakyushu_day`, {
+                    opacity: 0,
+                    delay: 0.5,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: `.trigger .yufuin`,
+                        start: 'top top', 
+                    }
+                })
+
+
+            } else if (locations[i] === "yufuin"){
+                //表示のみ
+                gsap.to(`.space .yufuin .day`, {
+                    x: -width*0.95,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: `.trigger .yufuin .day`,
+                        start: 'top top',
+                    },
+                });
+            } else {
+
+                gsap.to(`.space .${locations[i]} .day`, {
+                    x: -width*0.95,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: `.trigger .${locations[i]} .day`,
+                        start: 'top top',
+                    },
+                });
+                if (i < locations.length-1) {
+                    gsap.to(`.space .${locations[i]} .${contents[j]}`, {
+                        y: -height,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: `.trigger .${locations[i+1]}`,
+                            start: 'top top', 
+                        },
+                    })
+                    gsap.to(`.space .${locations[i]} .${contents[j]}`, {
+                        opacity: 0,
+                        delay: 0.5,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: `.trigger .${locations[i+1]}`,
+                            start: 'top top', 
+                        },
+                    })
+                } 
+            }
+        } else if (contents[j] === "date") {
+            if (locations[i] === "kitakyushu") { 
+                //表示
+                gsap.to(`#kitakyushu_date`, {
+                    opacity: 1,
+                    scrollTrigger: {
+                        trigger: `.trigger .${locations[i]} .${contents[j]}`,
+                        start: 'top top', 
+                    },
+                })
+
+                //退場
+                gsap.to(`#kitakyushu_date`, {
+                    y: -height,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: `.trigger .yufuin`,
+                        start: 'top top', 
+                    },
+                })
+                gsap.to(`#kitakyushu_date`, {
+                    opacity: 0,
+                    delay: 0.5,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: `.trigger .yufuin`,
+                        start: 'top top', 
+                    },
+                })
+
+
+            } else if (locations[i] === "yufuin"){
+                //表示のみ
+                gsap.to(`#yufuin_date`, {
+                    opacity: 1,
+                    scrollTrigger: {
+                        trigger: `.trigger .${locations[i]} .${contents[j]}`,
+                        start: 'top top', 
+                    },
+                })
+            } else {
+                gsap.to(`.space .${locations[i]} .date`, {
+                    opacity: 1,
+                    scrollTrigger: {
+                        trigger: `.trigger .${locations[i]} .${contents[j]}`,
+                        start: 'top top', 
+                    },
+                });
+                if (i < locations.length-1) {
+                    gsap.to(`.space .${locations[i]} .${contents[j]}`, {
+                        y: -height,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: `.trigger .${locations[i+1]}`,
+                            start: 'top top', 
+                        },
+                    })
+                    gsap.to(`.space .${locations[i]} .${contents[j]}`, {
+                        opacity: 0,
+                        delay: 0.5,
+                        duration: 1,
+                        scrollTrigger: {
+                            trigger: `.trigger .${locations[i+1]}`,
+                            start: 'top top', 
+                        },
+                    })
+                } 
+            }
+        }else if (contents[j] === "location-mark") {
             if (i < locations.length-1) {
             gsap.fromTo(`#location-mark`, {
                 left: width*(location_point[i][0])/100,
