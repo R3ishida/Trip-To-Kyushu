@@ -31,18 +31,17 @@
     <div class="plan-box">
         <div class="plan-title">PLAN</div>
         <div class="arrow">
-            <div class="point"></div>
-            <div class="point"></div>
-            <div class="point"></div>
+            <div class="point point1"></div>
+            <div class="point point2"></div>
+            <div class="point point3"></div>
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 13">
                 <path id="多角形_1" data-name="多角形 1" d="M12.5,0,25,13H0Z" transform="translate(25 13) rotate(180)" fill="#ababab"/>
             </svg>
               
         </div>
-        <img class="image1" src="image/aso.jpeg" alt="">
-        <img class="image2" src="image/meshi.jpeg" alt="">
-        <img class="image3" src="image/onsen.jpeg" alt="">
-    
+        <img class="image1" src="image/onsen.jpeg" alt="">
+        <img class="image2" src="image/aso.jpeg" alt="">
+        <img class="image3" src="image/meshi.jpeg" alt="">
           
     </div>
     <div class="plan">
@@ -59,8 +58,8 @@
             </svg>
             <div class="day1-contents contents fukuoka">
                 <div class="day">Day1</div>
-                <div class="date">2.4(Sa.)</div>
-                <div class="location-mark"></div>
+                <div class="date">2.4(Sat.)</div>
+                <div class="location-mark" id="location-mark"></div>
                 <div class="location">Fukuoka</div>
                 <div class="caption">
                     <div class="triangle"></div>
@@ -86,8 +85,8 @@
             </div>
             <div class="day2-contents contents kitakyushu">
                 <div class="day">Day2</div>
-                <div class="date"></div>
-                <div class="location-mark"></div>
+                <div class="date">2.5(Sun.)</div>
+                <!-- <div class="location-mark"></div> -->
                 <div class="location">kitakyushu</div>
                 <div class="caption">
                     <div class="triangle"></div>
@@ -104,11 +103,11 @@
             </div>
             <div class="day2-contents contents beppu">
                 <div class="day">Day2</div>
-                <div class="date"></div>
-                <div class="location-mark"></div>
+                <div class="date">2.5(Sun.)</div>
                 <div class="location">Beppu</div>
                 <div class="caption">
                     <div class="triangle"></div>
+
                     <div class="container first">
                         <div class="time">
                             12:00
@@ -116,8 +115,9 @@
                         <div class="text">
                             "JIGOKU" mushi
                         </div>
-                        <img src="image/aso.jpeg" alt="">
+                        <img src="image/jigoku_mushi.jpeg" alt="">
                     </div>
+
                     <div class="container second">
                         <div class="time">
                             13:00
@@ -125,27 +125,82 @@
                         <div class="text">
                             "JIGOKU" meguri
                         </div>
-                        <img src="image/aso.jpeg" alt="">
+                        <img src="image/jigoku_meguri.jpeg" alt="">
                     </div>
+
                     <div class="container third">
                         <div class="time">
-                            13:00
+                            16:00
                         </div>
                         <div class="text">
                             "Yutoriro Beppu"
                         </div>
-                        <img src="image/aso.jpeg" alt="">
+                        <img src="image/onsen.jpeg" alt="">
                     </div>
                 </div>
             </div>
-            <div class="day3-contents contents">
+            <div class="day2-contents contents yufuin">
+                <div class="day">Day3</div>
+                <div class="date">2.6(Mon.)</div>
+                <div class="location">Yufuin</div>
+                <div class="caption">
+                    <div class="triangle"></div>
+                    <div class="container first">
+                        <div class="time">
+                            10:00
+                        </div>
+                        <div class="text">
+                            COMICO ART MUSEUM
+                        </div>
+                        <img src="image/kitakyushu_city_liblary.jpeg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="day3-contents contents aso">
+                <div class="day">Day3</div>
+                <div class="date">2.6(Mon.)</div>
+                <!-- <div class="location-mark"></div> -->
+                <div class="location">Aso</div>
+                <div class="caption">
+                    <div class="triangle"></div>
 
+                    <div class="container first">
+                        <div class="time">
+                            12:00
+                        </div>
+                        <div class="text">
+                            "IMAKIN SHOKUDO"
+                        </div>
+                        <img src="image/imakin.jpeg" alt="">
+                    </div>
+
+                    <div class="container second">
+                        <div class="time">
+                            13:00
+                        </div>
+                        <div class="text">
+                            Mt. Aso
+                        </div>
+                        <img src="image/nakadake_kako.jpeg" alt="">
+                    </div>
+
+                    <div class="container third">
+                        <div class="time">
+                            16:00
+                        </div>
+                        <div class="text">
+                            Ryokan "Sansui"
+                        </div>
+                        <img src="image/onsen2.jpeg" alt="">
+                    </div>
+                </div>
             </div>
             <div class="day4-contents contents">
 
             </div>
         </div>
         <div class="trigger">
+            <div class="dummy"></div>
             <div class="fukuoka">
                 <div class="day"></div>
                 <div class="date"></div>
@@ -163,7 +218,6 @@
                 <div class="location"></div>
                 <div class="caption"></div>
                 <div class="inner-caption first"></div>
-                <div class="inner-caption second"></div>
             </div>
             <div class="beppu">
                 <div class="day"></div>
@@ -173,8 +227,28 @@
                 <div class="caption"></div>
                 <div class="inner-caption first"></div>
                 <div class="inner-caption second"></div>
+                <div class="inner-caption third"></div>
             </div>
             <div class="yufuin">
+                <div class="day"></div>
+                <div class="date"></div>
+                <div class="location-mark"></div>
+                <div class="location"></div>
+                <div class="caption"></div>
+                <div class="inner-caption first"></div>
+                <div class="inner-caption second"></div>
+            </div>
+            <div class="aso">
+                <div class="day"></div>
+                <div class="date"></div>
+                <div class="location-mark"></div>
+                <div class="location"></div>
+                <div class="caption"></div>
+                <div class="inner-caption first"></div>
+                <div class="inner-caption second"></div>
+                <div class="inner-caption third"></div>
+            </div>
+            <div class="unko">
                 <div class="day"></div>
                 <div class="date"></div>
                 <div class="location-mark"></div>
