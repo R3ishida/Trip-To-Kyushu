@@ -7,7 +7,7 @@ const day1_space = $('.space').offset().top;
 $(window).scroll(function() {
     let scroll = $(this).scrollTop();    
     
-    if( scroll >= day1_space) {
+    if( scroll >= day1_space ) {
         $('.space').css({
             'position': 'fixed',
             'top': '0',
@@ -127,7 +127,7 @@ gsap.to('.image3', {
 
 gsap.to('.arrow svg', {
     opacity: 1,
-    delay: 2.5,
+    delay: 2,
     duration: 1,
     scrollTrigger: {
         trigger: '.arrow svg',
@@ -153,6 +153,7 @@ locations = [
     "beppu",
     "yufuin",
     "aso",
+    "fukuoka2"
 ]
 
 location_point = [
@@ -162,6 +163,7 @@ location_point = [
     [77, 38],
     [68, 41],
     [55, 55],
+    [40,31]
 ]
 
 contents = [
@@ -179,6 +181,7 @@ captions = [
     ["first", "second", "third"],
     ["first"],
     ["first", "second", "third"],
+    []
 ]
 
 gsap.to(`.space .fukuoka .location-mark`, {
@@ -202,6 +205,7 @@ for (let i = 0; i < locations.length; i++) {
                     scrollTrigger: {
                         trigger: `.trigger .kitakyushu .day`,
                         start: 'top top',
+                        scrub: true
                     },
                 });
 
@@ -212,6 +216,7 @@ for (let i = 0; i < locations.length; i++) {
                     scrollTrigger: {
                         trigger: `.trigger .yufuin`,
                         start: 'top top', 
+                        scrub: true
                     }
                 })
                 gsap.to(`#kitakyushu_day`, {
@@ -221,6 +226,7 @@ for (let i = 0; i < locations.length; i++) {
                     scrollTrigger: {
                         trigger: `.trigger .yufuin`,
                         start: 'top top', 
+                        scrub: true
                     }
                 })
 
@@ -235,8 +241,30 @@ for (let i = 0; i < locations.length; i++) {
                     scrollTrigger: {
                         trigger: `.trigger .yufuin .day`,
                         start: 'top top',
+                        scrub: true
                     },
                 });
+
+                //退場
+                gsap.to(`#yufuin_day`, {
+                    y: -height,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: `.trigger .fukuoka2`,
+                        start: 'top top', 
+                        scrub: true
+                    }
+                })
+                gsap.to(`#yufuin_day`, {
+                    opacity: 0,
+                    delay: 0.5,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: `.trigger .fukuoka2`,
+                        start: 'top top', 
+                        scrub: true
+                    }
+                })
             } else {
 
                 gsap.to(`.space .${locations[i]} .day`, {
@@ -247,6 +275,7 @@ for (let i = 0; i < locations.length; i++) {
                     scrollTrigger: {
                         trigger: `.trigger .${locations[i]} .day`,
                         start: 'top top',
+                        scrub: true
                     },
                 });
                 if (i < locations.length-1) {
@@ -256,6 +285,7 @@ for (let i = 0; i < locations.length; i++) {
                         scrollTrigger: {
                             trigger: `.trigger .${locations[i+1]}`,
                             start: 'top top', 
+                            scrub: true
                         },
                     })
                     gsap.to(`.space .${locations[i]} .${contents[j]}`, {
@@ -265,6 +295,7 @@ for (let i = 0; i < locations.length; i++) {
                         scrollTrigger: {
                             trigger: `.trigger .${locations[i+1]}`,
                             start: 'top top', 
+                            scrub: true
                         },
                     })
                 } 
@@ -277,6 +308,7 @@ for (let i = 0; i < locations.length; i++) {
                     scrollTrigger: {
                         trigger: `.trigger .${locations[i]} .${contents[j]}`,
                         start: 'top top', 
+                        scrub: true
                     },
                 })
 
@@ -287,6 +319,7 @@ for (let i = 0; i < locations.length; i++) {
                     scrollTrigger: {
                         trigger: `.trigger .yufuin`,
                         start: 'top top', 
+                        scrub: true
                     },
                 })
                 gsap.to(`#kitakyushu_date`, {
@@ -296,6 +329,7 @@ for (let i = 0; i < locations.length; i++) {
                     scrollTrigger: {
                         trigger: `.trigger .yufuin`,
                         start: 'top top', 
+                        scrub: true
                     },
                 })
 
@@ -306,7 +340,28 @@ for (let i = 0; i < locations.length; i++) {
                     opacity: 1,
                     scrollTrigger: {
                         trigger: `.trigger .${locations[i]} .${contents[j]}`,
+                        start: 'top top',
+                        scrub: true 
+                    },
+                })
+
+                gsap.to(`#yufuin_date`, {
+                    y: -height,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: `.trigger .fukuoka2`,
                         start: 'top top', 
+                        scrub: true
+                    },
+                })
+                gsap.to(`#yufuin_date`, {
+                    opacity: 0,
+                    delay: 0.5,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: `.trigger .fukuoka2`,
+                        start: 'top top', 
+                        scrub: true
                     },
                 })
             } else {
@@ -314,7 +369,8 @@ for (let i = 0; i < locations.length; i++) {
                     opacity: 1,
                     scrollTrigger: {
                         trigger: `.trigger .${locations[i]} .${contents[j]}`,
-                        start: 'top top', 
+                        start: 'top top',
+                        scrub: true 
                     },
                 });
                 if (i < locations.length-1) {
@@ -323,7 +379,8 @@ for (let i = 0; i < locations.length; i++) {
                         duration: 1,
                         scrollTrigger: {
                             trigger: `.trigger .${locations[i+1]}`,
-                            start: 'top top', 
+                            start: 'top top',
+                            scrub: true 
                         },
                     })
                     gsap.to(`.space .${locations[i]} .${contents[j]}`, {
@@ -332,7 +389,8 @@ for (let i = 0; i < locations.length; i++) {
                         duration: 1,
                         scrollTrigger: {
                             trigger: `.trigger .${locations[i+1]}`,
-                            start: 'top top', 
+                            start: 'top top',
+                            scrub: true 
                         },
                     })
                 } 
@@ -358,7 +416,8 @@ for (let i = 0; i < locations.length; i++) {
                 opacity: 1,
                 scrollTrigger: {
                     trigger: `.trigger .${locations[i]} .${contents[j]}`,
-                    start: 'top top', 
+                    start: 'top top',
+                    scrub: true 
                 },
             })
             if (i < locations.length-1) {
@@ -367,7 +426,8 @@ for (let i = 0; i < locations.length; i++) {
                     duration: 1,
                     scrollTrigger: {
                         trigger: `.trigger .${locations[i+1]}`,
-                        start: 'top top', 
+                        start: 'top top',
+                        scrub: true 
                     },
                 })
                 gsap.to(`.space .${locations[i]} .${contents[j]}`, {
@@ -376,7 +436,8 @@ for (let i = 0; i < locations.length; i++) {
                     duration: 1,
                     scrollTrigger: {
                         trigger: `.trigger .${locations[i+1]}`,
-                        start: 'top top', 
+                        start: 'top top',
+                        scrub: true 
                     },
                 })
 
@@ -442,6 +503,14 @@ for (let i = 0; i < locations.length; i++) {
                 scrub: true,
             }
         })
-    }  
+    }
+//     gsap.to(`.plan`, {
+//         x: -width,
+//         scrollTrigger: {
+//             trigger: `.margin-page`, 
+//             start: 'top top',
+//             scrub: true
+//         }
+//     })
 }
 

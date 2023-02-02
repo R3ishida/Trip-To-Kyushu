@@ -323,6 +323,20 @@ body .plan .space .aso .caption .third {
   top: 0;
   left: 100vw;
 }
+body .plan .space .fukuoka2 .location-mark {
+  top: 31vw;
+  left: 40vw;
+}
+body .plan .space .fukuoka2 .location {
+  top: 45vw;
+  left: 30vw;
+}
+body .plan .space .fukuoka2 .caption {
+  top: 63vw;
+}
+body .plan .space .fukuoka2 .caption .triangle {
+  left: 30vw;
+}
 body .plan .trigger {
   width: 100%;
 }
@@ -350,4 +364,17 @@ body .plan .trigger div .span {
 body .plan .trigger .end {
   width: 100vw;
   height: 500vw;
+}
+body .new-page {
+  width: 100vw;
+  height: 200vw;
+  background-color: #8DCEA4;
+  margin-top: 0;
+}
+body .new-page2 {
+  z-index: 100;
+  width: 100vw;
+  height: 200vw;
+  background-color: #8DCEA4;
+  margin-top: 0;
 }/*# sourceMappingURL=main.css.map */

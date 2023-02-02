@@ -6,6 +6,7 @@ body {
     color: #707070;
     overflow: hidden;
     background-color: #97ffbb20;
+    
     .title-box {
         font-weight: 700;
         .left-title {
@@ -333,6 +334,22 @@ body {
                     }
                 }
             }
+            .fukuoka2 {
+                .location-mark {
+                    top: 31vw;
+                    left: 40vw;
+                }
+                .location {
+                    top: 45vw;
+                    left: 30vw;
+                }
+                .caption {
+                    top: 63vw;
+                    .triangle {
+                        left: 30vw;
+                    }
+                }
+            }
         }
         .trigger {
             width: 100%;
@@ -365,4 +382,18 @@ body {
             }
         }
     }
+    .new-page {
+        width: 100vw;
+        height: 200vw;
+        background-color: #8DCEA4;
+        margin-top: 0;
+    }
+    .new-page2 {
+        z-index: 100;
+        width: 100vw;
+        height: 200vw;
+        background-color: #8DCEA4;
+        margin-top: 0;
+    }
+
 }
